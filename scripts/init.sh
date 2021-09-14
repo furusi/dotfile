@@ -5,7 +5,12 @@ ln -s $PWD/../.zshrc $HOME/
 ln -s $PWD/../.zprofile $HOME/
 ln -s $PWD/../.rgignore $HOME/
 ln -s $PWD/../.gnupg/gpg.conf $HOME/.gnupg/
-ln -s $PWD/../.gnupg/gpg-agent.conf $HOME/.gnupg/
+if [ "$(uname -m)" == 'arm64' ]; then
+    ln -s $PWD/../.gnupg/gpg-agent.conf.darwin.arm64 $HOME/.gnupg/gpg-agent.conf 
+# elif [ "$(expr substr $(uname -s) 1 5)" == 'Linux' ]; then
+#     OS='x86_64-unknown-linux-gnu'
+#     echo $OS
+fi
 touch $HOME/.zshrc.local.zsh
 mkdir -p $HOME/.config/
 ln -s $PWD/../.config/git/ $HOME/.config/
