@@ -1,5 +1,6 @@
 set HOMEBREW_DIR_A '/opt/homebrew'
 set HOMEBREW_DIR_I '/usr/local'
+set GOPATH $HOME/go/
 function armbrew --wraps brew
     set PATH $HOMEBREW_DIR_A/bin /usr/bin /bin $HOMEBREW_DIR_A/sbin /usr/sbin /sbin
     $HOMEBREW_DIR_A/bin/brew $argv
