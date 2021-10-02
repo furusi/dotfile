@@ -7,10 +7,10 @@ set MY_ARCH (uname -m)
 set MY_OS (uname -s)
 
 #mac
-if test (uname -s) = "Darwin"
+if test $MY_OS = "Darwin"
     # arm mac
-    if test (uname -m) = "arm64"
-        
+    if test $MY_ARCH = "arm64"
+        set -gx BEERHALL $HOME/BeerHall
         # homebrew
         function armbrew --wraps brew
             set -lx PATH $HOMEBREW_DIR_A/bin /usr/bin /bin $HOMEBREW_DIR_A/sbin /usr/sbin /sbin
