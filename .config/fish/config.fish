@@ -3,17 +3,32 @@ set -gx HOMEBREW_DIR_I '/usr/local'
 set -gx GOPATH $HOME/go/
 set -gx EDITOR 'emacs'
 
-# homebrew
-set -x PATH $HOMEBREW_DIR_A/bin $HOMEBREW_DIR_A/sbin $PATH
+set MY_ARCH (uname -m)
+set MY_OS (uname -s)
 
-function armbrew --wraps brew
-    set -lx PATH $HOMEBREW_DIR_A/bin /usr/bin /bin $HOMEBREW_DIR_A/sbin /usr/sbin /sbin
-    $HOMEBREW_DIR_A/bin/brew $argv
+#mac
+if test (uname -s) = "Darwin"
+    # arm mac
+    if test (uname -m) = "arm64"
+        
+        # homebrew
+        function armbrew --wraps brew
+            set -lx PATH $HOMEBREW_DIR_A/bin /usr/bin /bin $HOMEBREW_DIR_A/sbin /usr/sbin /sbin
+            $HOMEBREW_DIR_A/bin/brew $argv
+        end
+        function intelbrew --wraps brew
+            set -lx PATH $HOMEBREW_DIR_I/bin /usr/bin /bin $HOMEBREW_DIR_I/sbin /usr/sbin /sbin
+            arch --x86_64 $HOMEBREW_DIR_I/bin/brew $argv
+        end
+    end
 end
-function intelbrew --wraps brew
-    set -lx PATH $HOMEBREW_DIR_I/bin /usr/bin /bin $HOMEBREW_DIR_I/sbin /usr/sbin /sbin
-    arch --x86_64 $HOMEBREW_DIR_I/bin/brew $argv
-end
+
+# gpg-agent
+set -e SSH_AUTH_SOCK
+set -U -x SSH_AUTH_SOCK (gpgconf --list-dirs agent-ssh-socket)
+set -x GPG_TTY (tty)
+gpg-connect-agent updatestartuptty /bye >/dev/null
+
 function e
     emacsclient -nw -a ""
 end
