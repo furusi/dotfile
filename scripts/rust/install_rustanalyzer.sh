@@ -9,7 +9,5 @@ else
     echo "Your platform ($(uname -a)) is not supported."
     exit 1
 fi
-curl -L https://github.com/rust-analyzer/rust-analyzer/releases/latest/download/rust-analyzer-$OS.gz -o /tmp/rust-analyzer.gz
-gunzip /tmp/rust-analyzer.gz
-cp /tmp/rust-analyzer ~/.local/bin/rust-analyzer
+curl -L https://github.com/rust-analyzer/rust-analyzer/releases/latest/download/rust-analyzer-$OS.gz | gunzip -c - > ~/.local/bin/rust-analyzer
 chmod +x ~/.local/bin/rust-analyzer
