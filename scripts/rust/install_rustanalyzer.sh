@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 if [ "$(uname)" == 'Darwin' ]; then
-    OS='aarch64-apple-darwin'
+    OS=$(uname -m)-apple-darwin
     echo $OS
 elif [ "$(expr substr $(uname -s) 1 5)" == 'Linux' ]; then
     OS='x86_64-unknown-linux-gnu'

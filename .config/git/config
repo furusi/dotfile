@@ -38,4 +38,4 @@
 	cmd = /Volumes/MacData/Apps/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
 [ghq]
-	root=~/git
+	root = ~/git
