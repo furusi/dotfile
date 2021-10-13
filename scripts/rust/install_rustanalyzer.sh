@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 if [ "$(uname)" == 'Darwin' ]; then
-    if ["$uname -m" == "x86_64"]
+    if [ "$(uname -m)" == "x86_64" ]
     then
         ARCH="x86_64"
     else
