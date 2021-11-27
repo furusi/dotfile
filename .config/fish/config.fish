@@ -35,6 +35,9 @@ end
 function ekill
 emacsclient -e "(kill-emacs)"
 end
+function cd-rootdir-git
+    cd (git rev-parse --show-toplevel)
+end
 
 if status is-interactive
     # Commands to run in interactive sessions can go here
