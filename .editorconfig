@@ -12,5 +12,5 @@ indent_size = 4
 [{*.s,*.asm,Makefile,.config/**/config}]
 indent_style = tab
 
-[{sshcontrol,.gitignore,.projectile}]
+[{sshcontrol,.gitignore,.projectile,rustfmt.toml}]
 insert_final_newline=true
