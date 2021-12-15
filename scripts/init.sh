@@ -23,4 +23,5 @@ ln -s $PWD/../.config/bat/ $HOME/.config/
 ln -s $PWD/../.config/latexmk/ $HOME/.config/
 ln -s $PWD/../.config/tig/ $HOME/.config/
 ln -s $PWD/../.config/fish/ $HOME/.config/
+ln -s $PWD/../.config/powershell/ $HOME/.config/
 sh ./init-emacs.sh
