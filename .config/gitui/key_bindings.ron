@@ -1,0 +1,4 @@
+(
+    move_down : Some(( code: Char('n'), modifiers: ( bits: 2))),
+    move_up   : Some(( code: Char('p'), modifiers: ( bits: 2))),
+)
