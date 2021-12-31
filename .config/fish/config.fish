@@ -23,6 +23,10 @@ if test $MY_OS = "Darwin"
     end
 end
 
+if command -v starship > /dev/null
+    starship init fish | source
+end
+
 # gpg-agent
 set -e SSH_AUTH_SOCK
 set -U -x SSH_AUTH_SOCK (gpgconf --list-dirs agent-ssh-socket)
