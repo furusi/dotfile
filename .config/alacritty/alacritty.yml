@@ -7,6 +7,8 @@ font:
   # Thin strokes are suitable for retina displays, but for non-retina screens
   # it is recommended to set `use_thin_strokes` to `false`.
   use_thin_strokes: true
+  normal:
+    family: Source Han Mono
 
 key_bindings:
   - { key: A,         mods: Alt,       chars: "\x1ba"                       }
