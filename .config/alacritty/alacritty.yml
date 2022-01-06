@@ -8,7 +8,8 @@ font:
   # it is recommended to set `use_thin_strokes` to `false`.
   use_thin_strokes: true
   normal:
-    family: Source Han Mono
+    family: PlemolJP Console NF
+  size: 14.0
 
 key_bindings:
   - { key: A,         mods: Alt,       chars: "\x1ba"                       }
