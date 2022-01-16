@@ -1,3 +1,4 @@
+# https://github.com/alacritty/alacritty/releases/latest/download/alacritty.yml
 env:
   TERM: alacritty
   
