@@ -1,7 +1,12 @@
 # https://github.com/alacritty/alacritty/releases/latest/download/alacritty.yml
 env:
   TERM: alacritty
-  
+
+window:
+  dimensions:
+    columns: 80
+    lines: 30
+
 font:
   # Thin stroke font rendering (macOS only)
   #
