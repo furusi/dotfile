@@ -4,8 +4,8 @@ env:
 
 window:
   dimensions:
-    columns: 80
-    lines: 30
+    columns: 120
+    lines: 40
 
 font:
   # Thin stroke font rendering (macOS only)
