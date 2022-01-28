@@ -106,7 +106,7 @@ colors:
   # Normal colors
   cursor:
     text: '0xf9e7c4'
-    cursor: '0xf9e7c4'
+    cursor: '0x606060'
 
   # Normal colors
   normal:
