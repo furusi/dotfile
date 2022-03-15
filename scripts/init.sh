@@ -27,4 +27,5 @@ ln -s $PWD/../.config/fish/config.fish $HOME/.config/
 mkdir $HOME/.config/gitui/
 ln -s $PWD/../.config/gitui/key_bindings.ron $HOME/.config/gitui/
 ln -s $PWD/../.config/powershell/ $HOME/.config/
+ln -s $PWD/../.config/nvim/ $HOME/.config/
 sh ./init-emacs.sh

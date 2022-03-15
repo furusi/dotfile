@@ -4,9 +4,14 @@ set autoindent
 set hls
 
 call plug#begin()
-Plug 'tyru/eskk.vim'
+" Plug 'tyru/eskk.vim'
+Plug 'vim-denops/denops.vim'
+Plug 'vim-denops/denops-helloworld.vim'
+Plug 'vim-skk/skkeleton'
 call plug#end()
-
+" 例
+imap <C-j> <Plug>(skkeleton-enable)
+cmap <C-j> <Plug>(skkeleton-enable)
 let g:eskk#directory = "~/.eskk"
 let g:eskk#dictionary = { 'path': "~/.skk-jisyo", 'sorted': 0, 'encoding': 'utf-8', }
 let g:eskk#large_dictionary = { 'path': "~/.emacs.d/skk-get-jisyo/SKK-JISYO.L", 'sorted': 1, 'encoding': 'euc-jp', }
