@@ -93,6 +93,8 @@ key_bindings:
   - {key: Key6,      mods: Alt|Shift, chars: "\e^"}                    # Alt + ^
   - {key: Backslash, mods: Alt,       chars: "\e\\"}                   # Alt + \
   - {key: Backslash, mods: Alt|Shift, chars: "\e|"}                    # Alt + |
+  - {key: Slash,     mods: Control,   chars: "\x1F"}                   # (for MacOS) Ctrl + /
+
 colors:
   # COLORSCHEME: gruvbox_light.yaml
   # Default colors
