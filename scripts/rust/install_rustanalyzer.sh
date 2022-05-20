@@ -20,6 +20,12 @@ else
     exit 1
 fi
 echo "system: $OS"
+if [ -f ~/.local/bin/rust-analyzer ]
+then
+    echo "delete existing rust-analyzer binary"
+    rm ~/.local/bin/rust-analyzer
+fi
+
 echo "downloading: https://github.com/rust-analyzer/rust-analyzer/releases/latest/download/rust-analyzer-$OS.gz"
 curl -L https://github.com/rust-analyzer/rust-analyzer/releases/latest/download/rust-analyzer-$OS.gz | gunzip -c - > ~/.local/bin/rust-analyzer
 chmod +x ~/.local/bin/rust-analyzer
