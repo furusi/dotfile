@@ -45,6 +45,12 @@ function cd-rootdir-git
     cd (git rev-parse --show-toplevel)
 end
 
+# opam
+if [ -f $HOME/.opam/opam-init/init.fish ]
+    source $HOME/.opam/opam-init/init.fish > /dev/null 2> /dev/null; or true
+end
+
+
 if status is-interactive
     # Commands to run in interactive sessions can go here
 end
