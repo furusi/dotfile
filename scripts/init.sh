@@ -23,7 +23,7 @@ ln -s $PWD/../.config/bat/ $HOME/.config/
 ln -s $PWD/../.config/latexmk/ $HOME/.config/
 ln -s $PWD/../.config/tig/ $HOME/.config/
 mkdir $HOME/.config/fish
-ln -s $PWD/../.config/fish/config.fish $HOME/.config/
+ln -s $PWD/../.config/fish/config.fish $HOME/.config/fish/
 mkdir $HOME/.config/gitui/
 ln -s $PWD/../.config/gitui/key_bindings.ron $HOME/.config/gitui/
 ln -s $PWD/../.config/powershell/ $HOME/.config/
