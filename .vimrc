@@ -3,8 +3,8 @@ set nocompatible
 filetype off
 
 if filereadable(expand('~/.vimrc.plugin')) 
-  source ~/.vimrc.plugin 
-  endif 
+source ~/.vimrc.plugin 
+endif 
 
 
 "filetype on
@@ -40,17 +40,17 @@ set fileencodings=utf-8,cp932,sjis,euc-jp,iso-2022-jp
 set fileformats=unix,dos,mac
 
 augroup PrevimSettings
-	autocmd!
-	autocmd BufNewFile,BufRead *.{md,mdwn,mkd,mkdn,mark*} set filetype=markdown
+autocmd!
+autocmd BufNewFile,BufRead *.{md,mdwn,mkd,mkdn,mark*} set filetype=markdown
 augroup END
-	autocmd BufNewFile,BufRead *.{aj} set filetype=java
+autocmd BufNewFile,BufRead *.{aj} set filetype=java
 
 if filereadable(expand('~/.vimrc.keybind'))
-	source ~/.vimrc.keybind
+source ~/.vimrc.keybind
 endif
 
 if filereadable(expand('~/.vimrc.local'))
-	source ~/.vimrc.local
+source ~/.vimrc.local
 endif
 " lazy method of appending this onto your .vimrc ":w! >> ~/.vimrc"
 
@@ -69,25 +69,25 @@ set foldlevel=0
 
 "カーソル位置記録
 if has("autocmd")
-  augroup redhat
-    " In text files, always limit the width of text to 78 characters
-    autocmd BufRead *.txt set tw=78
-    " When editing a file, always jump to the last cursor position
-    autocmd BufReadPost *
-    \ if line("'\"") > 0 && line ("'\"") <= line("$") |
-    \   exe "normal! g'\"" |
-    \ endif
-  augroup END
+augroup redhat
+" In text files, always limit the width of text to 78 characters
+autocmd BufRead *.txt set tw=78
+" When editing a file, always jump to the last cursor position
+autocmd BufReadPost *
+\ if line("'\"") > 0 && line ("'\"") <= line("$") |
+\   exe "normal! g'\"" |
+\ endif
+augroup END
 endif
 
 "ビジュアルモード選択範囲を検索
 xnoremap * :<C-u>call <SID>VSetSearch()<CR>/<C-R>=@/<CR><CR>
 xnoremap # :<C-u>call <SID>VSetSearch()<CR>?<C-R>=@/<CR><CR>
 function! s:VSetSearch()
-	let temp = @s
-	norm! gv"sy
-	let @/ = '\V' . substitute(escape(@s, '/\'), '\n', '\\n', 'g')
-	let @s = temp
+let temp = @s
+norm! gv"sy
+let @/ = '\V' . substitute(escape(@s, '/\'), '\n', '\\n', 'g')
+let @s = temp
 endfunction
 
 set clipboard=unnamed
