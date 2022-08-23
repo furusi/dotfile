@@ -58,3 +58,7 @@ if status is-interactive
 end
 
 set -q GHCUP_INSTALL_BASE_PREFIX[1]; or set GHCUP_INSTALL_BASE_PREFIX $HOME ; set -gx PATH $HOME/.cabal/bin $HOME/.ghcup/bin $PATH # ghcup-env
+
+# starship(prompt)
+set -gx STARSHIP_CONFIG $HOME/.config/starship/config.toml
+
