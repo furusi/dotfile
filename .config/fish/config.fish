@@ -8,6 +8,9 @@ set MY_OS (uname -s)
 
 #mac
 if test $MY_OS = "Darwin"
+    eval (/usr/local/bin/brew shellenv)
+    eval (/opt/homebrew/bin/brew shellenv)
+    set -gx INFOPATH "/opt/homebrew/share/info/emacs" $INFOPATH "/usr/share/info"
     # arm mac
     if test $MY_ARCH = "arm64"
         set -gx BEERHALL $HOME/BeerHall
