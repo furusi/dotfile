@@ -4,6 +4,7 @@ ln -s $PWD/../.editorconfig $HOME/
 ln -s $PWD/../.zshrc $HOME/
 ln -s $PWD/../.zprofile $HOME/
 ln -s $PWD/../.rgignore $HOME/
+mkdir $HOME/.gnupg
 ln -s $PWD/../.gnupg/gpg.conf $HOME/.gnupg/
 if [ "$(uname -m)" == 'arm64' ]; then
     ln -s $PWD/../.gnupg/gpg-agent.conf.darwin.arm64 $HOME/.gnupg/gpg-agent.conf
