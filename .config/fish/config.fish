@@ -11,6 +11,7 @@ if test $MY_OS = "Darwin"
     eval (/usr/local/bin/brew shellenv)
     eval (/opt/homebrew/bin/brew shellenv)
     set -gx INFOPATH "/opt/homebrew/share/info/emacs" $INFOPATH "/usr/share/info"
+    set -gx MANPATH /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/share/man $MANPATH
     # arm mac
     if test $MY_ARCH = "arm64"
         set -gx BEERHALL $HOME/BeerHall
@@ -71,3 +72,4 @@ set -q GHCUP_INSTALL_BASE_PREFIX[1]; or set GHCUP_INSTALL_BASE_PREFIX $HOME ; se
 # starship(prompt)
 set -gx STARSHIP_CONFIG $HOME/.config/starship/config.toml
 
+eval "$(rbenv init -)"
