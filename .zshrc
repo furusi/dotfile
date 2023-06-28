@@ -59,10 +59,10 @@ setopt auto_pushd
 TERM=xterm-256color
 
 # OPAM configuration
-echo $PATH|grep "opam"
-if [ $? -eq 1 ] ; then
-. $HOME/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
-fi
+# echo $PATH|grep "opam"
+# if [ $? -eq 1 ] ; then
+# . $HOME/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
+# fi
 
 #right prompt
 #PROMPT=$BLUE'[%n@%m] %(!.#.$) '$WHITE
