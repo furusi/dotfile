@@ -12,7 +12,7 @@ set MY_OS (uname -s)
 if test $MY_OS = "Darwin"
     # echo "Current Architecture: $MY_ARCH"
     if status --is-login
-        set -gx INFOPATH "/opt/homebrew/share/info/emacs" "/usr/share/info" $INFOPATH
+        set -gx INFOPATH "/usr/share/info" $INFOPATH
         set -gx MANPATH /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/share/man $MANPATH
     end
     # arm mac
