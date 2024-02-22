@@ -1,8 +1,0 @@
-# -*- mode: snippet -*-
-# name: plantumlclass
-# key: plantumlclass
-# --
-@startuml
-skinparam dpi 300
-$1 <|-- $2
-@enduml

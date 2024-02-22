@@ -1,5 +1,0 @@
-# -*- mode: snippet -*-
-# name: 文字サイズをfootnotesizeにする(ox-beamer用)
-# key: foot
-# --
-#+LATEX: \footnotesize

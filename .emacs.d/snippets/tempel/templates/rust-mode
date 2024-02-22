@@ -1,3 +1,0 @@
-rust-mode
-
-(bench "#[bench]" n> "fn hoge(b: &mut Bencher){" n> "}")
