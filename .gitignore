@@ -58,11 +58,5 @@ flycheck_*.el
 
 .DS_Store
 .w3m/cookie
-.emacs.d/flycheck_init.el
-/.emacs.d/straight/build-cache.el
-/.emacs.d/straight/repos/
-/.emacs.d/straight/build/
-/.emacs.d/lisp/picasm/
-/.emacs.d/straight/modified/
 /.config/git/config.local
 /.config/nvim/plugged/
